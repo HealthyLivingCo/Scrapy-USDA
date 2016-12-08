@@ -10,3 +10,22 @@ class UsdaItem(Item):
     name = Field()
     offset = Field()
 pass
+
+#https://ndb.nal.usda.gov/ndb/doc/apilist/API-NUTRIENT-REPORT.md
+class NbdItem(Item):
+	id = Field()
+	weight = Field()
+	measure = Field()
+	caff_unit = Field()
+	caff_value = Field()
+	caff_gm = Field()
+	pro_unit = Field()
+	pro_value = Field()
+	pro_gm = Field()
+	fat_unit = Field()
+	fat_value = Field()
+	fat_gm = Field()
+	carb_unit = Field()
+	carb_value = Field()
+	carb_gm = Field()
+pass
