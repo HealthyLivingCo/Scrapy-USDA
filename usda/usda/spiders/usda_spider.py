@@ -6,6 +6,7 @@ import json
 import datetime
 import time
 from usda.items import UsdaItem
+from api_key import key
 
 class USDASpider(Spider):
 	name = "usda"
@@ -17,7 +18,7 @@ class USDASpider(Spider):
 		url_pattern = "http://api.nal.usda.gov/ndb/list?format=json&lt=f&sort=id&max=500&offset={offsetnum}&api_key={apikey}"
 		
 		for location in locations:
-			self.start_urls.append(url_pattern.format(offsetnum=location, apikey="P0YxrofLI0ydkKOy7b3jFTi6o80yFvyKnpsrCl9l"))
+			self.start_urls.append(url_pattern.format(offsetnum=location, apikey=key))
 			
 	def parse(self, response):
 		jsonresponse = json.loads(response.body_as_unicode())

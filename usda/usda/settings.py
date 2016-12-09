@@ -10,6 +10,7 @@ BOT_NAME = 'usda'
 
 SPIDER_MODULES = ['usda.spiders']
 NEWSPIDER_MODULE = 'usda.spiders'
+DOWNLOAD_DELAY = 6
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'usda (+http://www.yourdomain.com)'
