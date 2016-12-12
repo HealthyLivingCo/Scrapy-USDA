@@ -17,7 +17,7 @@ class FoodSpider(Spider):
 	def __init__(self):
 		locations = big_array
 		
-		url_pattern = "http://api.nal.usda.gov/ndb/reports/?ndbno=45135529&type=f&format=json&api_key={apikey}"
+		url_pattern = "http://api.nal.usda.gov/ndb/reports/?ndbno={offsetnum}&type=f&format=json&api_key={apikey}"
 		
 		for location in locations:
 			self.start_urls.append(url_pattern.format(offsetnum=location, apikey=key))
